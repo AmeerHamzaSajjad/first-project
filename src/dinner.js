@@ -1,10 +1,9 @@
 import React from 'react';
 
-function Dinner(){
+function Dinner(props){
     return(
         <div>
-            <h1>Today we are serving baryani</h1>
-            <h1>Today we are serving chicken kharai</h1>
+            <h1>Today we are serving {props.dishName}</h1>
         </div>
     );
 }
