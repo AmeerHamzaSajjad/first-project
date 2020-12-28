@@ -4,7 +4,7 @@ import Dinner from './dinner.js';
 function App() {
   return (
     <div className="App">
-      <Dinner dishName = "Chicken Kharai"/>
+      <Dinner dishName = "Chicken Kharai" sweetDish = "Kheer"/>
     </div>
   );
 }
