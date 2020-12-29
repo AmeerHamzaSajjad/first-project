@@ -1,10 +1,24 @@
+import React, { useState } from 'react';
+import Message from './Message.js';
 import './App.css';
 import Dinner from './dinner.js';
 
 function App() {
+
+let [count, setCount] = useState(0);
+let [isMorning, setMorning] = useState(true);
   return (
-    <div className="App">
-      <Dinner dishName = "Chicken Kharai" sweetDish = "Kheer"/>
+    <div className= {`box ${isMorning ? 'dayLight' : ''}`}>
+      <h1>Good {isMorning? 'Morning' : 'Night'}</h1>
+      <Message counter = {count}/>
+      <br/>
+      <button onClick = {
+        ()=>setCount(count = count+1)
+      }>Update Counter</button>
+
+      <button onClick = {
+        ()=>setMorning(!isMorning)
+        }>Update color</button>
     </div>
   );
 }
